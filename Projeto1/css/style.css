@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black ;
+}
+
+.container{
+    grid-gap: 5px; /*Deixa espaço entre as divisões*/
+    width: 100vw;
+    height: 100vh;
+    display: grid;  /*Comandos para reconhecer as partes*/
+    grid-template-areas:  /* áreas do layout*/
+        "k k"            /*topo*/
+        "r l"           /*menu e meio*/
+        "f f";         /*rodapé*/
+    grid-template-columns: 1fr 4fr; /*divisão em colunas*/
+    grid-template-rows: 1fr 4fr 1fr; /*divisão em linhas*/
+}
+
+.topo{
+    grid-area: k;
+    background-color: green;
+}
+
+.menu{
+    grid-area: r;
+    background-color: blue;
+}
+
+.meio {
+    grid-area: l;
+    background-color: white;
+}
+
+.rodape{
+    grid-area: f;
+    background-color: orange;
+}
+/* fim */
+
